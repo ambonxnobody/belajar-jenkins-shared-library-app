@@ -21,7 +21,7 @@ pipeline {
         stage("Hello Ambon") {
             steps {
                 script {
-                    Output.hello("Ambon")
+                    Output.hello(this, "Ambon")
                 }
             }
         }
