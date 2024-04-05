@@ -13,6 +13,14 @@ pipeline {
         stage("Hello World") {
             steps {
                 script {
+                    hello.world()
+                }
+            }
+        }
+
+        stage("Hello Ambon") {
+            steps {
+                script {
                     Output.hello("Ambon")
                 }
             }
