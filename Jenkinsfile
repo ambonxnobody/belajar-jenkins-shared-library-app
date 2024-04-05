@@ -4,6 +4,8 @@
 //     type: "maven"
 // ])
 
+import ambonxnobody.jenkins.Output;
+
 pipeline {
     agent any
 
@@ -11,7 +13,7 @@ pipeline {
         stage("Hello World") {
             steps {
                 script {
-                    hello.world()
+                    Output.hello("Ambon")
                 }
             }
         }
