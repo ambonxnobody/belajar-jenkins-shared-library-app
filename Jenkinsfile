@@ -3,7 +3,7 @@
 // mavenPipeline()
 
 ambonPipeline([
-    type: "golang"
+    type: "maven"
 ])
 
 // import ambonxnobody.jenkins.Output;
