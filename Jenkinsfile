@@ -10,42 +10,51 @@ pipeline {
     agent any
 
     stages {
-        stage("Maven Compile") {
+        stage("Library Resource") {
             steps {
                 script {
-                    maven(["clean", "compile", "test"])
+                    def config = libraryResource("config/build.json")
+                    echo(config)
                 }
             }
         }
         
-        stage("Global Variable") {
-            steps {
-                script {
-                    echo(author())
-                    echo(author.name())
-                    echo(author.channel())
-                }
-            }
-        }
+        // stage("Maven Compile") {
+        //     steps {
+        //         script {
+        //             maven(["clean", "compile", "test"])
+        //         }
+        //     }
+        // }
         
-        stage("Hello World") {
-            steps {
-                script {
-                    hello.world()
-                    hello.person([
-                        firstName: "Hafid",
-                        lastName: "Dian Nurfaujan Ahat"
-                    ])
-                }
-            }
-        }
+        // stage("Global Variable") {
+        //     steps {
+        //         script {
+        //             echo(author())
+        //             echo(author.name())
+        //             echo(author.channel())
+        //         }
+        //     }
+        // }
+        
+        // stage("Hello World") {
+        //     steps {
+        //         script {
+        //             hello.world()
+        //             hello.person([
+        //                 firstName: "Hafid",
+        //                 lastName: "Dian Nurfaujan Ahat"
+        //             ])
+        //         }
+        //     }
+        // }
 
-        stage("Hello Ambon") {
-            steps {
-                script {
-                    Output.hello(this, "Ambon")
-                }
-            }
-        }
+        // stage("Hello Ambon") {
+        //     steps {
+        //         script {
+        //             Output.hello(this, "Ambon")
+        //         }
+        //     }
+        // }
     }
 }
