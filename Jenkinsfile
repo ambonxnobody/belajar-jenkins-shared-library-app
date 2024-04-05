@@ -32,6 +32,10 @@ pipeline {
             steps {
                 script {
                     hello.world()
+                    hello.person([
+                        firstName: "Hafid",
+                        lastName: "Dian Nurfaujan Ahat"
+                    ])
                 }
             }
         }
