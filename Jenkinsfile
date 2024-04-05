@@ -1,10 +1,10 @@
 @Library("belajar-jenkins-shared-library@main") _
 
-mavenPipeline()
+// mavenPipeline()
 
-// pznPipeline([
-//     type: "maven"
-// ])
+ambonPipeline([
+    type: "golang"
+])
 
 // import ambonxnobody.jenkins.Output;
 
